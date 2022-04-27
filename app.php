@@ -3,9 +3,10 @@
 use Ratchet\Server\IoServer;
 use Ratchet\Http\HttpServer;
 use Ratchet\WebSocket\WsServer;
-use Dice\Socket;
 
 require dirname( __FILE__ ) . '/vendor/autoload.php';
+
+use Dice\Socket;
 
 $Port = 32400;
 
