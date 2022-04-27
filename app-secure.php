@@ -18,8 +18,10 @@ $loop = \React\EventLoop\Factory::create();
 
 $secure_websockets = new \React\Socket\Server('0.0.0.0:'.$Port, $loop);
 $secure_websockets = new \React\Socket\SecureServer($secure_websockets, $loop, [
-    'local_cert' => '', //removed
+    'local_cert' => 'cert.pem',
+    'local_pk' => 'privkey.pem',
     'verify_peer' => false,
+    'verify_peer_name' => false,
 ]);
 
 $secure_websockets_server = new \Ratchet\Server\IoServer($server, $secure_websockets, $loop);

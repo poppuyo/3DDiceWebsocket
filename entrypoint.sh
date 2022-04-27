@@ -11,4 +11,4 @@ ls -al app
 ls -al vendor
 ls -al vendor/psr
 
-php ./app.php
+php ./app-secure.php
